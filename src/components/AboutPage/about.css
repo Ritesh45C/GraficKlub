@@ -1,0 +1,10 @@
+.about {
+    background-image: url(/images/about.jpg);
+    background-size: cover;
+    height: 146vh
+}
+
+.bg {
+    width: 100%;
+    z-index: 0;
+}

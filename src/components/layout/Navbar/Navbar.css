@@ -1,0 +1,202 @@
+nav {
+    font-family: 'Oswald', sans-serif;
+    background-color: white;
+    color: black;
+    height: 7.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    margin-left: 4rem;
+    font-size: 3rem;
+    letter-spacing: .5rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.navlinks {
+    width: 60%;
+}
+
+.navItems {
+    list-style: none;
+
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 1.7rem;
+}
+
+@media (max-width: 500px) {
+    .navItems {
+        display: none;
+    }
+}
+
+
+.navItemss {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    font-size: 1.7rem;
+}
+
+.navItems a {
+    letter-spacing: .35rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.navlinks ul li a,
+.navlinks ul li a:after,
+.navlinks ul li a:before {
+    transition: all .5s;
+}
+
+.navlinks ul li a:hover {
+    color: #555;
+}
+
+/* stroke */
+.navlinks ul li a,
+nav.fill ul li a {
+    position: relative;
+}
+
+.navlinks ul li a:after,
+nav.fill ul li a:after {
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #aaa;
+    height: 2px;
+}
+
+.navlinks ul li a:hover:after {
+    width: 100%;
+}
+
+.nav_logout {
+    color: white;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+    background-color: #1fb180;
+    padding: 1.05rem;
+    padding: 6px 25px;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+
+/* toggler */
+
+.navItems_small {
+    width: 44%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: white;
+    height: 50%;
+    font-size: 2rem;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    animation: slide-in-right .5s both;
+}
+
+.navItems_small a {
+    letter-spacing: .35rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+@keyframes slide-in-right {
+    0% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+.navbar-toggler {
+    display: none;
+
+    height: 40px;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    color: black;
+    border: 3px solid black;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    padding: 0 5px;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+@media (max-width: 500px) {
+    .navbar-toggler {
+        display: block;
+    }
+}
+
+
+.navbar-toggler span,
+.navbar-toggler span::before,
+.navbar-toggler span::after {
+    display: block;
+    content: '';
+    background-color: black;
+    height: 1.8px;
+    width: 28px;
+    border-radius: 4px;
+    transition: all ease-in-out 0.3s;
+}
+
+.navbar-toggler span::before {
+    transform: translateY(-8px);
+}
+
+.navbar-toggler span::after {
+    transform: translateY(5px);
+}
+
+.navbar-toggler.open-navbar-toggler span {
+    /* transform: rotate(90deg); */
+    background-color: transparent;
+    /* transform: scale(0.85) rotate(270deg); */
+}
+
+.navbar-toggler.open-navbar-toggler span::before {
+    transform: translateY(0px) rotate(45deg);
+    /* transform: translateY(0px) scale(0.75) rotate(45deg); */
+}
+
+.navbar-toggler.open-navbar-toggler span::after {
+    transform: translateY(-3px) rotate(-45deg);
+    /* transform: translateY(-3px) scale(0.75) rotate(-45deg); */
+}

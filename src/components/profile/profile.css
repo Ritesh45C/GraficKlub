@@ -1,0 +1,136 @@
+.profile_container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-top: 11%;
+    font-family: 'Oswald', sans-serif;
+    padding-bottom: 3%;
+    z-index: 100;
+
+    animation: bg-pan-right 8s both;
+
+    /* animation: color-change-5x 8s linear infinite alternate both; */
+
+}
+
+
+.profile_navlist {
+    width: 67%;
+}
+
+.profile_pic {
+    display: flex;
+
+}
+
+.profile_name {
+    font-size: 2.5rem;
+
+    margin-left: 3rem;
+    margin-top: 3rem;
+    font-family: roboto;
+    letter-spacing: 0.1rem;
+    text-transform: capitalize;
+}
+
+.profile_navlist ul li {
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.activeTab {
+    border-bottom: 2px solid black;
+}
+
+:target {
+    color: red;
+}
+
+.upload_form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: space-around;
+    margin: auto;
+    height: 47rem;
+    padding: 2rem;
+
+}
+
+.profile_setting {
+    position: absolute;
+    right: 89px;
+    color: rgba(0, 0, 0, 0.87);
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+    background-color: #e0e0e0;
+    cursor: pointer;
+    padding: 1.05rem;
+    font-size: 1.3rem;
+}
+
+.profile_setting:hover {
+    background-color: #d5d5d5;
+}
+
+
+.profile_setting:active {
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.MuiFormLabel-root {
+    line-height: 0 !important;
+    font-size: 1.5rem !important;
+}
+
+.label {
+    margin-bottom: 2rem !important;
+}
+
+;
+
+@media (max-width: 500px) {
+    .profile_container {
+        flex-direction: column;
+    }
+
+    .profile_pic {
+        margin-left: 0;
+    }
+
+    .profile_navlist {
+        width: 100%;
+    }
+
+}
+
+/* @keyframes color-change-5x {
+    0% {
+        background: #19dcea;
+    }
+
+    25% {
+        background: #143F59;
+    }
+
+    50% {
+        background: #BF2A45;
+    }
+
+    75% {
+        background: #f5be10;
+    }
+
+    100% {
+        background: #3bd80d;
+    }
+} */
+
+@keyframes bg-pan-right {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}

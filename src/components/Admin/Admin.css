@@ -1,0 +1,24 @@
+.photos_collage {
+    display: grid;
+    grid-template-columns: 30rem 30rem 30rem;
+    align-items: center;
+    text-align: center;
+}
+
+.contest_form {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    margin: auto;
+}
+
+.MuiTabs-flexContainerVertical {
+    flex-direction: column;
+    height: 100% !important;
+    justify-content: space-evenly !important;
+}
+
+.MuiCardMedia-root {
+    width: 25rem !important;
+    height: 25rem !important;
+}

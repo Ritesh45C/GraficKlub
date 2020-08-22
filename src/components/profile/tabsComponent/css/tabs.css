@@ -1,0 +1,357 @@
+.mywork {
+    display: flex;
+
+    width: 100%
+}
+
+.singleImage {
+    width: 20rem;
+    height: 25rem;
+}
+
+.photo_content {
+    display: grid;
+    grid-template-columns: repeat(3, 25rem);
+    grid-column-gap: 2rem;
+    grid-row-gap: 6rem;
+}
+
+@media (max-width: 500px) {
+    .photo_content {
+        grid-template-columns: repeat(2, 23rem);
+        justify-content: center;
+    }
+}
+
+
+.singleImage:hover {
+    cursor: pointer;
+    filter: brightness(0.7);
+}
+
+.list {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-left: 2rem;
+    width: 23%;
+    display: flex;
+    margin-right: 16rem;
+    flex-flow: column;
+    align-items: center;
+}
+
+.manageLink {
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 1.45rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 3rem;
+    display: block
+}
+
+/* .content {
+    display: grid;
+    grid-template-columns: 40rem 40rem;
+    grid-row-gap: 5rem;
+} */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-main {
+    position: fixed;
+    background: white;
+
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.display-block {
+    display: block;
+    z-index: 100;
+}
+
+.display-none {
+    display: none;
+}
+
+
+
+.contest_container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 60%;
+    margin: auto;
+    height: 10rem;
+    justify-content: space-evenly;
+    padding-left: 2rem;
+    margin-bottom: 2rem
+}
+
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border-bottom: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+
+}
+
+.contest_title {
+    font-size: 2rem;
+    color: #28286d;
+}
+
+.contest_price {
+    background: black;
+    color: white;
+    padding: 1rem;
+
+    font-size: 1.3rem;
+}
+
+.contest_description {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.upload:hover {
+    cursor: pointer;
+}
+
+.uploadForm {
+    width: 66%;
+    border: 1px solid;
+    background-color: cornsilk;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-flow: column;
+    margin-top: 2rem;
+}
+
+textarea {
+    resize: vertical;
+    width: 100%;
+    max-height: 300px;
+    border-radius: 4px;
+    border: none;
+    min-height: 124px;
+    min-width: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 124px;
+    overflow: auto
+}
+
+.photo_submit {
+    margin: auto;
+    background-color: #c5bc88;
+    border: none;
+    border-radius: 3px;
+    padding: 4px
+}
+
+/* earning */
+
+.container {
+    display: flex;
+    /* border: 1px solid; */
+    width: 60%;
+    margin: auto;
+    height: 16rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    margin-bottom: 6rem;
+}
+
+.item_description {
+    font-size: 1.3rem;
+    width: 54%;
+    color: #28286d
+}
+
+.item_amount {
+    font-size: 1.6rem;
+    margin-right: 1rem;
+}
+
+.blank {
+    width: 33%
+}
+
+@media (max-width: 500px) {
+    .mywork {
+        display: block
+    }
+
+    .list {
+        width: 100%;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+
+    .blank {
+        width: 0%
+    }
+
+
+}
+
+
+
+.delete:hover {
+    color: red;
+}
+
+
+
+
+/* image hover animation */
+
+
+.hovereffect {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+}
+
+.hovereffect .overlay {
+    width: 80%;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: auto;
+    bottom: 0;
+    padding: 1em;
+    height: max-content;
+    background-color: #79FAC4;
+    color: #3c4a50;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    visibility: hidden;
+
+}
+
+.hovereffect img {
+    display: block;
+    position: relative;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+}
+
+.hovereffect:hover img {
+    -webkit-transform: translate3d(0, -10%, 0);
+    transform: translate3d(0, -10%, 0);
+}
+
+.hovereffect h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 12px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    float: left;
+    margin: 0px;
+    display: inline-block;
+}
+
+.hovereffect a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #fff;
+    margin: 50px 0 0 0;
+    background-color: transparent;
+}
+
+.hovereffect a.info:hover {
+    box-shadow: 0 0 5px #fff;
+}
+
+
+.hovereffect p.icon-links a {
+    float: right;
+    color: #3c4a50;
+    font-size: 1.4em;
+}
+
+.hovereffect:hover p.icon-links a:hover,
+.hovereffect:hover p.icon-links a:focus {
+    color: #252d31;
+}
+
+.hovereffect h2,
+.hovereffect p.icon-links a {
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0, 200%, 0);
+    transform: translate3d(0, 200%, 0);
+    visibility: visible;
+}
+
+.hovereffect p.icon-links a span:before {
+    display: inline-block;
+    padding: 8px 10px;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.hovereffect:hover .overlay,
+.hovereffect:hover h2,
+.hovereffect:hover p.icon-links a {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.hovereffect:hover h2 {
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+}
+
+.hovereffect:hover p.icon-links a:nth-child(3) {
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+.hovereffect:hover p.icon-links a:nth-child(2) {
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+}
+
+.hovereffect:hover p.icon-links a:first-child {
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}

@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 62.5%
+}
+
+@media only screen and (max-width: 68.75em) {
+    html {
+        font-size: 50%
+    }
+}
+
+.profile_pic {
+    margin-left: 10rem
+}
+
+.profile_form {
+    width: 65%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile_submit {
+    color: rgba(0, 0, 0, 0.87);
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+    background-color: #FF5722;
+    padding: 1.05rem;
+    margin: auto;
+    font-size: 1.3rem;
+    outline: none;
+    width: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.profile_submit:hover {
+    background-color: #e91e63;
+    color: white
+}
+
+.MuiOutlinedInput-input {
+    padding: 18.5px 14px;
+    font-size: 1.5rem !important;
+}
+
+.tab-list {
+    border-bottom: 1px solid #ccc;
+    padding-left: 0;
+    font-size: 1.5rem;
+
+    letter-spacing: .2rem;
+    font-weight: 300;
+}
+
+.tab-list-item {
+    cursor: pointer;
+    display: inline-block;
+    list-style: none;
+    margin-right: 6rem;
+    margin-bottom: -1px;
+    padding: 0.5rem 0.75rem;
+}
+
+.tab-list-active {
+    border-bottom: solid #583f3f;
+    /* border-width: 7px 1px 0 1px; */
+}
+
+@media (max-width: 500px) {
+    .tab-list-item {
+        margin-right: 3rem;
+    }
+
+    .tabs {
+        margin-top: 2rem
+    }
+
+
+}
+
+.MuiTabs-flexContainerVertical {
+    flex-direction: column;
+    height: 100% !important;
+    justify-content: space-evenly !important;
+}
+
+.upload_button {
+
+    font-size: 1.5rem;
+    height: 3rem;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    color: white;
+    margin-top: 5rem;
+    cursor: pointer;
+    background-color: #000000;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+
+}
+
+.footer {
+    padding: 3rem;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    margin: auto;
+    text-align: center;
+}
+
+.tab_container {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    margin-top: 3%;
+    background-color: #00000014;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    height: min-content;
+}
